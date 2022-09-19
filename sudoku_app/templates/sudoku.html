@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sudoku</title>
+    <link  rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>{{ result }}</h1>
+    <h1>Поиграйте в Судоку (пжлст)</h1>
+</header>
+
+<main>
+    <div class="container">
+        <form method="post">
+        <table class="sudoku">
+            {% for row in arr %}
+                {% set outer = loop %}
+                <tr>
+                    {% for col in row %}
+                        <td class="b{{ outer.index }} r{{ loop.index }}">
+                            {% if col == 0 %}
+                                <input name="{{ outer.index }} {{ loop.index }}" id="{{ outer.index }} {{ loop.index }}" type="number" class="int-input" max="9" min="1"/>
+                            {% else %}
+                                {{ col }}
+                            {% endif %}
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+            <input type="submit" value="Проверить ваш ответ">
+        </form>
+    </div>
+</main>
+</body>
+</html>

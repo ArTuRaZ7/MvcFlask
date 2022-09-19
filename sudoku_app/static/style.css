@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    text-align: center;
+}
+
+.container{
+    margin-top: 20px;
+    position: flexbox;
+    text-align: center;
+}
+
+.sudoku{
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    border-collapse: collapse;
+    text-align: center;
+    border: solid black 2px;
+    margin-bottom: 30px;
+}
+
+.int-input{
+    width:43px;
+    height:43px;
+    border: 0;
+    text-align: center;
+}
+
+.b1, .b2, .b4, .b5, .b7, .b8, .b9{
+    border: solid gray 1px;
+}
+
+.b3, .b6{
+    border-right: solid gray 1px;
+    border-top: solid gray 1px;
+    border-left: solid gray 1px;
+    border-bottom: solid black 2px
+}
+
+.r3, .r6{
+    border-right: solid black 2px;
+    border-top: solid gray 1px;
+    border-left: solid gray 1px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
